@@ -1,1 +1,109 @@
-
+<html>
+  <head>
+     <script>
+      function sorting()
+      {
+           var name=["aditya","vyomesh","maruthi"];
+           var aditya=[60,96,56];
+           var vyomesh=[82,90,100];
+           var maruthi=[27,28,35];
+           var t;
+           var tot1=tot2=tot3=0;
+           for(i=0;i<3;i++)
+           {
+               tot1=tot1+maruthi[i];
+               tot2=tot2+vyomesh[i];
+               tot3=tot3+aditya[i];
+           }
+          var avg1,avg2,avg3;
+          avg1=tot1/3;
+          avg2=tot2/3;
+          avg3=tot3/3;
+          var total=[tot1,tot2,tot3];
+          var avg=[avg1,avg2,avg3];
+          document.writeln("sorting based on names");
+          document.writeln("<br>");
+          for(i=0;i<2;i++)
+           {
+              for(j=0;j<3-i-1;j++)
+               {
+                   if(name[j]>name[j+1])
+                    {
+                           t=name[j];
+                           name[j]=name[j+1];
+                           name[j+1]=t;
+                           t=total[j];
+                           total[j]=total[j+1];
+                           total[j+1]=t;
+                           t=avg[j];
+                           avg[j]=avg[j+1];
+                           avg[j+1]=t;
+                     }
+               }
+            }
+          for(i=0;i<3;i++)
+          {
+               document.writeln(name[i]);
+               document.writeln(avg[i]);
+               document.writeln(total[i]);
+               document.writeln("<br>");
+          }
+          document.writeln("sorting based on total");
+          for(i=0;i<2;i++)
+          {
+              for(j=0;j<3-i-1;j++)
+                {
+                   if(total[j]>total[j+1])
+                    {
+                        t=name[j];
+                        name[j]=name[j+1];
+                        name[j+1]=t;
+                        t=total[j];
+                        total[j]=total[j+1];
+                        total[j+1]=t;
+                        t=avg[j];
+                        avg[j]=avg[j+1];
+                        avg[j+1]=t;
+                    }
+               }
+          }
+          for(i=0;i<3;i++)
+          {
+                document.writeln(name[i]);
+                document.writeln(avg[i]);
+                document.writeln(total[i]);
+                document.writeln("<br>");
+          }
+          document.writeln("<br>");
+          document.writeln("sorting based on average");
+          document.writeln("<br>");
+          for(i=0;i<2;i++)
+          {
+               for(j=0;j<3-i-1;j++)
+                {
+                    if(avg[j]>avg[j+1])
+                    {
+                          t=name[j];
+                          name[j]=name[j+1];
+                          name[j+1]=t;
+                          t=total[j];
+                          total[j]=total[j+1];
+                          total[j+1]=t;
+                          t=avg[j];
+                          avg[j]=avg[j+1];
+                          avg[j+1]=t;
+                     }
+                }
+           }
+           for(i=0;i<3;i++)
+           {
+               document.writeln(name[i]);
+               document.writeln(avg[i]);
+               document.writeln(total[i]);
+               document.writeln("<br>");
+           }
+     }
+     </script>
+   </head>
+   <body></body>
+</html>
